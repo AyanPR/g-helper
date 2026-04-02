@@ -316,13 +316,6 @@ namespace GHelper
             activateCheck = true;
         }
 
-        private void ButtonDonate_Click(object? sender, EventArgs e)
-        {
-            AppConfig.Set("donate_click", AppConfig.Get("start_count"));
-            buttonDonate.Badge = 0;
-            Process.Start(new ProcessStartInfo("https://g-helper.com/support") { UseShellExecute = true });
-        }
-
         private void LabelBacklight_Click(object? sender, EventArgs e)
         {
             if (AppConfig.IsDynamicLighting() && DynamicLightingHelper.IsEnabled()) DynamicLightingHelper.OpenSettings();
